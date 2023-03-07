@@ -55,15 +55,14 @@ const Movies = () => {
     };
 
     return (
-        <>
-        {/* <h1>Movies</h1> */}
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="query" value={query} onChange={handleChange} />
-            <button type="submit">Search</button>
-        </form>
-        {isLoading && <Loader/>}
-        <MoviesList movies={movies}/>
-        </>
+      <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="query" value={query} onChange={handleChange} />
+        <button type="submit">Search</button>
+      </form>
+      {isLoading && <Loader />}
+      <MoviesList movies={movies} />
+    </div>
     )
 };
 
